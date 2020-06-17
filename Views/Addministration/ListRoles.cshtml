@@ -1,0 +1,57 @@
+﻿@model IEnumerable<IdentityRole>
+
+@{
+    ViewBag.Title = "All Roles";
+}
+
+    <div class="jumbotron shadow bg-white">
+        <div class="jumbotron">
+            <h5 class="breadcrumb container ml-2">
+                All Roles
+                <span>
+                    <a class="btn btn-dark mb-3 ml-5" style="width:auto" asp-action="CreateRole"
+                       asp-controller="Addministration">
+                        Add New role
+                    </a>
+                </span>
+            </h5>
+        </div>
+        @if (Model.Any())
+        {
+            <div class="jumbotron">
+                @foreach (var role in Model)
+                {
+                    <div class="Card mb-3">
+                        <div class="card-header">
+                            Role ID : @role.Id
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Role Name: @role.Name</h5>
+                        </div>
+                        <div class="card-footer ">
+                            <a class="cws_button" asp-action="EditRole" asp-controller="Addministration" asp-route-id="@role.Id">Edit</a>
+                            <a class="cws_button" asp-action="DeleteRole" asp-controller="Addministration" asp-route-id="@role.Id">Delete</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="jumbotron">
+                <div class="Card">
+                    <div class="card-header">
+                        No roles Created yet
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Use the button below to create a role
+                        </h5>
+                        <a class="cws_button" style="width:auto" asp-controller="addministration" asp-action="CreateRole">
+                            Create Role
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

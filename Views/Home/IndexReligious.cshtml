@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Movie>
+
+@*@foreach (var movie in Model.Reverse())
+{
+    if (movie.MovieCategory == MovieCategory.Religious)
+    {
+        var photoPath = "~/images/" + (movie.photopath ?? "noimage.jpg");
+        <div class="content-wrapper">
+            <figure>
+                <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture">
+                    <img class="card-img-top imageThumbnail" src="@photoPath"
+                         asp-append-version="true" />
+                </a>
+            </figure>
+        </div>
+        <div class="gallery-text">
+            <div class="title">@movie.Name</div>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+        </div>
+        <div><a asp-controller="home" asp-action="details" asp-route-id="@movie.Id" class="cws_button">View</a></div>
+    }
+}*@
+
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <div class="page-content">
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+                                <div class='grid-row clearfix'>
+                                    <div class='grid-col grid-col-12'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <div class="recent_projects ">
+                                                    <h3 class="section-title">Latest Religious Cartoons</h3>
+                                                    <div data-carousel-column="4" style="margin-top:50px;">
+
+                                                        @foreach (var movie in Model.Reverse())
+                                                        {
+                                                            if (movie.MovieCategory == MovieCategory.Religious)
+                                                            {
+                                                                var photoPath = "~/images/" + (movie.photopath ?? "noimage.jpg");
+                                                                <div class="iso-item">
+                                                                    <div class="content-wrapper">
+                                                                        <figure>
+                                                                            <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture">
+                                                                                <img class="card-img-top imageThumbnail" src="@photoPath"
+                                                                                     asp-append-version="true" />
+                                                                            </a>
+                                                                        </figure>
+                                                                    </div>
+                                                                    <div class="gallery-text">
+                                                                        <div class="title">@movie.Name</div>
+                                                                        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                                    </div>
+                                                                    <div><a asp-controller="home" asp-action="details" asp-route-id="@movie.EncryptedId" class="cws_button">View</a></div>
+                                                                </div>
+                                                            }
+                                                        }
+
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>

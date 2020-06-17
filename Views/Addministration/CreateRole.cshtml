@@ -1,0 +1,25 @@
+﻿@model CreateRoleViewModel
+@{
+    ViewBag.Title = "Create Role";
+
+}
+
+    <div class="jumbotron shadow mx-auto row bg-white">
+        <form enctype="multipart/form-data" asp-controller="Addministration" asp-action="CreateRole" method="post">
+            <fieldset>
+                <legend>Create Role</legend>
+                <div class="form-group">
+                    <label asp-for="RoleName">Movie Title</label>
+                    <input asp-for="RoleName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Role Name">
+                    <small id="emailHelp" class="form-text text-muted">Adding new role.</small>
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button type="submit" class="cws_button">Create</button>
+                    </div>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </fieldset>
+        </form>
+    </div>

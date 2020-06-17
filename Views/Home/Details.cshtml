@@ -1,0 +1,44 @@
+﻿@model MovieDetailsViewModel
+@inject SignInManager<ApplicationUser> signInManager;
+
+@{
+    ViewBag.Title = Model.PageTitle;
+    var photoPath = "~/images/" + (Model.Movie.photopath ?? "noimage.png");
+    var videoPath = "~/videos/" + (Model.Movie.videopath ?? "noimage.png");
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class='cws-widget'>
+            <div class='cws_widget_content'>
+                <div class="section-title">
+                    <h1>@Model.Movie.Name</h1>
+                </div>
+                 <div class="iso-item">
+                        <div class="content-wrapper">
+                            <div class="prettyPhoto kids_picture">
+                                <video style="width:700px; height:450px;" controls>
+                                    <source src="@Url.Content(videoPath)" type="video/mp4" />
+                                    <source src="@Url.Content(videoPath)" type="video/ogg" />
+                                    <source src="@Url.Content(videoPath)" type="video/3gpp" />
+                                    <source src="@Url.Content(videoPath)" type="video/mpeg" />
+                                    <source src="@Url.Content(videoPath)" type="video/webm" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-text">
+                        <h4>Movie Info : @Model.Movie.MovieInfo</h4>
+                        <h4>Released Date : @Model.Movie.DateTime</h4>
+                    </div>
+                    <a asp-controller="home" asp-action="index" class="cws_button">Back</a>
+                    @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <a class="cws_button" asp-action="edit" asp-controller="home" asp-route-id="@Model.Movie.Id">Edit</a>
+                        <a class="cws_button" asp-action="Delete" asp-controller="Home" asp-route-id="@Model.Movie.Id">Delete</a>
+                    }
+                </div>
+         
+        </div>
+    </div>
+</div>

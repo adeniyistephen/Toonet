@@ -1,0 +1,389 @@
+﻿@*@{
+        ViewData["Title"] = "Jele O Sinmi";
+    }
+
+    @model IEnumerable<Movie>
+
+    <div class="card-deck">
+        @foreach (var movie in Model)
+        {
+            var photoPath = "~/images/" + (movie.photopath ?? "noimage.jpg");
+            <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+                <div class="card-header">
+                    <h3>@movie.Name</h3>
+                </div>
+
+                <img class="card-img-top imageThumbnail" src="@photoPath"
+                     asp-append-version="true" />
+
+                <div class="card-footer text-center">
+                    <a asp-controller="home" asp-action="details" asp-route-id="@movie.EncryptedId"
+                       class="btn btn-primary m-1">View</a>
+                </div>
+            </div>
+        }
+    </div>*@
+
+@{
+    ViewData["Title"] = "Jele O Sinmi";
+}
+
+@model IEnumerable<Movie>
+
+<div class="bg-level-2-page-width-container ">
+    <div class="bg-level-2 first-part" id="bg-level-2"></div>
+    <div class="l-page-width">
+        <div class="kids_slider_bg img_slider">
+            <div class="kids_slider_wrapper">
+                <div class="kids_slider_inner_wrapper">
+                    <div class="img-slider">
+                        <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
+                            <!-- START REVOLUTION SLIDER 4.6.5 fullwidth mode -->
+                            <div id="rev_slider_1_1" class="rev_slider fullwidthabanner">
+                                <ul>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/theme/pic/slide-17.jpg" alt="slide-17" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin fadeout tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            Responsive Design
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin fadeout tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            All pages look identically great regardless of the device’s resolution and display size.
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/images/0b5eb215-55c7-4dce-8c42-54153a7e90ba_multfilm-relf-wreck-it-1176.jpg" alt="slide-17" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin fadeout tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            Responsive Design
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin fadeout tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            All pages look identically great regardless of the device’s resolution and display size.
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/theme/pic/slide-5.jpg" alt="slide-5" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin fadeout tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
+                                            Easy Color Management
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin fadeout tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="4" data-endelementdelay="0.1" data-endspeed="300">
+                                            With the help of our customization panel
+                                            you can easily select any color and preview the results.
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/theme/pic/slide-47.jpg" alt="slide-47" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
+                                            Shop pages included
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            HappyKids includes all the needed page templates, widgets, cart and other shop-related content to represent your online store.
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/theme/pic/slide-27.jpg" alt="slide-27" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin fadeout tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
+                                            Slider Revolution Inside
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin fadeout tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="4" data-endelementdelay="0.1" data-endspeed="300">
+                                            A very powerful image slier is bundled into this template. Create your slides and enjoy the result.
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="~/theme/pic/slide-37.jpg" alt="slide-37" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <!-- LAYERS -->
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption kids-slider-header customin fadeout tp-resizeme" data-x="7" data-y="300" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="200" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
+                                            Lifetime Support
+                                        </div>
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption kids-slider-header-alt customin fadeout tp-resizeme" data-x="7" data-y="357" data-customin="x:-90;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="2" data-endelementdelay="0.1" data-endspeed="300">
+                                            We support our products as long as they are being sold. Be sure to get a fast, proffessional and reliable support from our staff.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tp-bannertimer tp-bottom"></div>
+                            </div>
+                        </div>
+                        <!-- END REVOLUTION SLIDER -->
+                    </div>
+                    <!--/ #kids-slider-->
+                </div>
+                <!--/ .kids_slider_inner_wrapper-->
+            </div>
+            <!--/ .kids_slider_wrapper-->
+        </div>
+        <!--/ .kids_slider_bg-->
+    </div>
+    <!-- .l-page-width -->
+    <div class="bg-level-2 second-part" id="bg-level-2"></div>
+</div>
+@*</div>*@
+
+<!-- .bg-level-1 -->
+<div id="kids_middle_container">
+    <!-- .content -->
+    <div class="kids_top_content">
+        <div class="kids_top_content_middle homepage">
+            <div class="l-page-width">
+                <section class="kids_posts_container clearfix">
+                    <div class="widget_wrapper">
+                        <div id="cws_benefits-5" class="widget widget_cws_benefits">
+                            <div class="widget-icon pic"><img src="~/theme/images/icon-2.png" alt /></div>
+                            <div class="cws-widget-content benefits_widget">
+                                <h3 class="widget-title">Educative</h3>
+                                <section class="text_part">Ut wisi enim ad minim veniam, quis nostrud exerci tation corper suscipit lobortis nisl ut aliqup.</section>
+                                <a href='#' class='cws_button '>More</a>
+                            </div>
+                        </div>
+                        <div id="cws_benefits-2" class="widget widget_cws_benefits">
+                            <div class="widget-icon pic"><img src="~/theme/images/icon-1.png" alt /></div>
+                            <div class="cws-widget-content benefits_widget">
+                                <h3 class="widget-title">Entertainment</h3>
+                                <section class="text_part">Lorem ipsum dolor sit consectetur adipiscing elit. Sed venenatis mollis lac us a egestas.</section>
+                                <a href='#' class='cws_button '>More</a>
+                            </div>
+                        </div>
+                        <div id="cws_benefits-3" class="widget widget_cws_benefits">
+                            <div class="widget-icon pic"><img src="~/theme/images/icon-3.png" alt /></div>
+                            <div class="cws-widget-content benefits_widget">
+                                <h3 class="widget-title">Religious</h3>
+                                <section class="text_part">Ut wisi enim ad minim veniam, quis nostrud exerci tation corper suscipit lobortis nisl.</section>
+                                <a href='#' class='cws_button '>More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bottom-border"></div>
+        </div>
+        <!-- .kids_top_content_middle -->
+    </div>
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <!-- ***************** - START Image floating - *************** -->
+                <div class="page-content">
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+                                <div class='grid-row clearfix'>
+                                    <div class='grid-col grid-col-12'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <div class="recent_projects ">
+                                                    <h3 class="section-title">Recent Projects</h3>
+                                                    <div class="projects_carousel clearfix" data-carousel-column="4">
+                                                        @*<---------index of movie-------->*@
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-1%402x.jpg" title="Project 1"><img src="~/theme/pic/250x250-kos-1.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 1</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-2%402x.jpg" title="Project 2"><img src="~/theme/pic/250x250-kos-2.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 2</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-3%402x.jpg" title="Project 3"><img src="~/theme/pic/250x250-kos-3.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 3</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-4%402x.jpg" title="Project 4"><img src="~/theme/pic/250x250-kos-4.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 4</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-6%402x.jpg" title="Project 5"><img src="~/theme/pic/250x250-kos-6.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 5</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                        <div class="iso-item">
+                                                            <div class="content-wrapper">
+                                                                <figure>
+                                                                    <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="~/theme/pic/250x250-kos-5%402x.jpg" title="Project 6"><img src="~/theme/pic/250x250-kos-5.jpg" alt="" /> </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="gallery-text">
+                                                                <div class="title">Project 6</div>
+                                                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer </p>
+                                                            </div>
+                                                            <div><a href="#" class="cws_button">View Project</a></div>
+                                                        </div>
+                                                    </div>
+                                                    <!--/ .projects-carousel -->
+                                                </div>
+                                                <!--/ .work-carousel-->
+                                                <hr />
+                                                <p>&nbsp;</p>
+                                            </section>
+                                        </section>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <div class="recent_projects ">
+                                                    <h3 class="section-title">Latest Cartoons</h3>
+                                                    <div>
+                                                        <div data-carousel-column="4" style="margin-top:50px;">
+                                                            @foreach (var movie in Model.Reverse())
+                                                            {
+                                                                var photoPath = "~/images/" + (movie.photopath ?? "noimage.jpg");
+                                                                <div class="iso-item">
+                                                                    <div class="content-wrapper">
+                                                                        <figure>
+                                                                            <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture">
+                                                                                <img class="card-img-top imageThumbnail" src="@photoPath"
+                                                                                     asp-append-version="true" />
+                                                                            </a>
+                                                                        </figure> 
+                                                                    </div>
+                                                                    <div class="gallery-text">
+                                                                        <div class="title">@movie.Name</div>
+                                                                        <p>@movie.MovieInfo</p>
+                                                                    </div>
+                                                                    <div><a asp-controller="home" asp-action="details" asp-route-id="@movie.Id" class="cws_button">View</a></div>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                    <!--/ .projects-carousel -->
+                                                </div>
+                                                <!--/ .work-carousel-->
+                                                <hr />
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class='grid-row clearfix'>
+                                    <div class='grid-col grid-col-12'>
+                                        <section class='cws-widget'>
+                                            <div class='widget-title'>About Happy Kids</div>
+                                            <section class='cws_widget_content'>
+                                                <p><img class="alignleft border size-thumbnail" src="~/theme/pic/150x150-img-1.png" alt="content_img_1" width="150" height="150" />In ac sollicitudin sem. Proin congue blandit eros, eu volutpat leo maximus vitae. Nulla a velit ut augue pretium fringilla. In hac habitasse platea dictumst. Sed vitae sodales purus. Cras ultrices condimentum lectus, nec laoreet sapien tempus vel. Duis pretium ante purus, et faucibus turpis pellentesque eget. Curabitur ac blandit dolor. Maecenas facilisis eleifend massa ac commodo. Integer justo felis, finibus at faucibus eget, pulvinar a odio. Suspendisse potenti. Curabitur auctor tristique arcu et dapibus. Praesent risus metus, ultricies ac ante interdum, fringilla finibus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nec varius enim. Aenean vitae ipsum pretium, elementum sapien at, tristique lacus. Nec laoreet sapien tempus vel. Duis pretium ante purus, et faucibus turpis pellentesque eget. Curabitur ac blandit dolor. Maecenas facilisis eleifend massa ac commodo.Donec at ullamcorper lectus, quis fringilla velit. Aliquam ipsum dui, porttitor id hendrerit nec, mollis ut odio.</p>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class='grid-row clearfix margin-top-none'>
+                                    <div class='grid-col grid-col-4'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <ul>
+                                                    <li><span style="text-decoration: underline;">Donec placerat lectus eu elit lobortis</span></li>
+                                                    <li><span style="text-decoration: underline;">Mauris vestibulum dui metus, quis</span></li>
+                                                    <li><span style="text-decoration: underline;">Fringilla libero gonec eget fusce</span></li>
+                                                </ul>
+                                            </section>
+                                        </section>
+                                    </div>
+                                    <div class='grid-col grid-col-4'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <ul>
+                                                    <li><span style="text-decoration: underline;">Donec placerat lectus eu elit lobortis</span></li>
+                                                    <li><span style="text-decoration: underline;">Mauris vestibulum dui metus, quis</span></li>
+                                                    <li><span style="text-decoration: underline;">Fringilla libero gonec eget fusce</span></li>
+                                                </ul>
+                                            </section>
+                                        </section>
+                                    </div>
+                                    <div class='grid-col grid-col-4'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <ul>
+                                                    <li><span style="text-decoration: underline;">Donec placerat lectus eu elit lobortis</span></li>
+                                                    <li><span style="text-decoration: underline;">Mauris vestibulum dui metus, quis</span></li>
+                                                    <li><span style="text-decoration: underline;">Fringilla libero gonec eget fusce</span></li>
+                                                </ul>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class='grid-row clearfix margin-top-none margin-bottom-none'>
+                                    <div class='grid-col grid-col-12'>
+                                        <section class='cws-widget'>
+                                            <section class='cws_widget_content'>
+                                                <hr />
+                                                <p>&nbsp;</p>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+
+                                <!-- comments block -->
+                                <!-- //end comments block -->
+                            </main>
+                            <div class="kids_clear"></div>
+                        </div>
+                        <!-- .entry-container -->
+                    </div>
+                </div>
+                <!-- ***************** - END Image floating - *************** -->
+            </section>
+            <!-- .bottom_content_container -->
+        </div>
+        <div class="content_bottom_bg"></div>
+    </div>
+</div>
+<!-- .end_content -->

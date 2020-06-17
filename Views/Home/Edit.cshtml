@@ -1,0 +1,51 @@
+﻿@model MovieEditViewModel
+
+@{
+    ViewBag.Title = "Edit Movie";
+    var photoPath = "~/images/" + (Model.ExistingPhotoPath ?? "noimage.png");
+}
+
+    <form enctype="multipart/form-data" asp-controller="Home" asp-action="Edit" method="post">
+        <input hidden asp-for="Id" />
+        <input hidden asp-for="ExistingPhotoPath" />
+        <div class="form-group row mt-3 mr-3 ml-2 mb-3">
+            <label asp-for="Name" class="col-sm-4 col-form-label"></label>
+            <div class="col-sm-8">
+                <input asp-for="Name" class="form-control" placeholder="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mr-3 ml-2 mb-3">
+            <label asp-for="MovieInfo" class="col-sm-4 col-form-label"></label>
+            <div class="col-sm-8">
+                <input asp-for="MovieInfo" class="form-control" placeholder="Movie Info" />
+                <span asp-validation-for="MovieInfo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mr-3 ml-2 mb-3">
+            <label asp-for="ReleseDate" class="col-sm-4 col-form-label"></label>
+            <input asp-for="ReleseDate" class="form-control" id="exampleInputPassword1" placeholder="Relese Date">
+            <div class="col-sm-8">
+                <span asp-validation-for="ReleseDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mr-3 ml-2 mb-3">
+            <label asp-for="Photo" class="col-sm-4 col-form-label"></label>
+            <div class="col-sm-8">
+                <div class="custom-file">
+                    <input asp-for="Photo" class="form-control custom-file-input">
+                    <label class="custom-file-label">Click here to change photo</label>
+                </div>
+            </div>
+        </div>
+
+        <img src="@photoPath" class="imageThumb ml-4" asp-append-version="true" />
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-dark mt-3 mr-3 ml-3 mb-3" style="width:auto">Update</button>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-dark">Cancel</a>
+            </div>
+        </div>
+     </form>
